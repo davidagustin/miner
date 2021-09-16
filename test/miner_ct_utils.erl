@@ -1263,10 +1263,6 @@ make_vars(Keys, Map, Mode) ->
               ?assert_loc_txn_version => 2,
               ?min_antenna_gain => 10,
               ?max_antenna_gain => 150,
-%%              ?price_oracle_refresh_interval => 25,
-%%              ?price_oracle_height_delta => 10,
-%%              ?price_oracle_price_scan_delay => 0,
-%%              ?price_oracle_price_scan_max => 50,
               ?txn_fees => true,
               ?staking_fee_txn_oui_v1 => 100 * ?USD_TO_DC, %% $100?
               ?staking_fee_txn_oui_v1_per_address => 100 * ?USD_TO_DC, %% $100
@@ -1592,7 +1588,3 @@ signatures(ConsensusMembers, BinBlock) ->
         ,[]
         ,ConsensusMembers
     ).
-
-%%new_random_key(Curve) ->
-%%    #{secret := PrivKey, public := PubKey} = libp2p_crypto:generate_keys(Curve),
-%%    {PrivKey, PubKey}.
